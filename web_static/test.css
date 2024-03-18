@@ -1,0 +1,29 @@
+p {
+    color: rgb(0, 0, 0);
+    background-color: rgb(202, 247, 253);
+    text-align: center;
+    padding: 15px;
+}
+
+h1 {
+    color: rgb(255, 0, 0);
+    padding-block-start: 20px;
+    padding-inline-start: 20px;
+    padding-inline-end: 10px;
+    margin: 20px;
+    width: 80%;
+    height: 20%;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+}
+
+body {
+    /* color: black; */
+    background-color: rgba(234, 255, 0, 0.496);
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: start;
+}
