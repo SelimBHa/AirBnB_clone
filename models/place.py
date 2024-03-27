@@ -13,9 +13,11 @@ def __init__(self, *args, **kwargs):
     self.longitude = 0.0
     self.amenity_ids = []
 
+
 def __str__(self):
     """Returns the string representation of a Place instance."""
     return "[Place] ({}) {}".format(self.id, self.__dict__)
+
 
 def to_dict(self):
     """Returns a dictionary representation of a Place instance."""
