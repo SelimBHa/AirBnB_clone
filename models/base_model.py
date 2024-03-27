@@ -18,7 +18,7 @@ class BaseModel:
         if kwargs:
             for key, value in kwargs.items():
                 if key in ('created_at', 'updated_at'):
-                    setattr(self, key, datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f"))
+             setattr(self, key, datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f"))
                 elif key != '__class__':
                     setattr(self, key, value)
         else:
@@ -27,7 +27,7 @@ class BaseModel:
 
     def __str__(self):
         """Returns the string representation of BaseModel instance."""
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+ return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """Updates the public instance attribute updated_at
@@ -45,5 +45,5 @@ class BaseModel:
 
     @classmethod
     def from_dict(cls, dict_obj):
-        """Creates a new instance of BaseModel from a dictionary representation."""
+"""Creates a new instance of BaseModel from a dictionary representation."""
         return cls(**dict_obj)
