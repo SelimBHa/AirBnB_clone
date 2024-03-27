@@ -7,7 +7,6 @@ for other models in the application.
 import uuid
 from datetime import datetime
 
-
 class BaseModel:
     """The BaseModel class that defines all common attributes
     and methods for other classes."""
@@ -41,4 +40,9 @@ class BaseModel:
         instance_dict['created_at'] = self.created_at.isoformat()
         instance_dict['updated_at'] = self.updated_at.isoformat()
         return instance_dict
+
+    @classmethod
+    def from_dict(cls, dict_obj):
+        """Creates a new instance of BaseModel from a dictionary representation."""
+        return cls(**dict_obj)
 
