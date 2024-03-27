@@ -13,6 +13,7 @@ class BaseModel:
     and methods for other classes.
     """
 
+
 def __init__(self, *args, **kwargs):
         """Initializes a new instance of BaseModel."""
     if kwargs:
