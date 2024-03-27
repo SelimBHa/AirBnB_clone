@@ -15,7 +15,7 @@ class BaseModel:
 
 
 def __init__(self, *args, **kwargs):
-        """Initializes a new instance of BaseModel."""
+    """Initializes a new instance of BaseModel."""
     if kwargs:
         for key, value in kwargs.items():
             if key in ('created_at', 'updated_at'):
