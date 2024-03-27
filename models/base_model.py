@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 class BaseModel:
-    """The BaseModel class that defines all common attributes and methods for other classes."""
+    """The BaseModel class attributes and methods."""
 
     def __init__(self, *args, **kwargs):
         """Initializes a new instance of BaseModel."""
@@ -16,11 +16,11 @@ class BaseModel:
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
-        """Updates the public instance attribute updated_at with the current datetime."""
+        """Updates the public with the current datetime."""
         self.updated_at = datetime.now()
 
     def to_dict(self):
-        """Returns a dictionary containing all keys/values of __dict__ of the instance."""
+        """Returns a dictionary."""
         return {
             **self.__dict__,
             '__class__': self.__class__.__name__,
