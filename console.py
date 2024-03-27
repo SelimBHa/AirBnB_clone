@@ -21,8 +21,19 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """This doesn't do anything when no command is passed"""
+        """Called when an empty line is entered"""
         pass
+
+    def precmd(self, line):
+        """Hook method executed just before the command line is interpreted"""
+        # Strip leading and trailing whitespaces from the command line
+        return line.strip()
+
+    def postcmd(self, stop, line):
+        """Hook method executed just after a command dispatch is finished"""
+        # Return False to continue command loop
+        return False
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
