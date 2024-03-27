@@ -1,9 +1,10 @@
-#!/usr/bin/python3
 """
 This module defines the BaseModel class, which serves as the base class
 for other models in the application.
 """
+
 import unittest
+from datetime import datetime
 from models.base_model import BaseModel
 
 class TestBaseModel(unittest.TestCase):
@@ -43,4 +44,3 @@ class TestBaseModel(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
