@@ -7,6 +7,7 @@ import unittest
 from datetime import datetime
 from models.base_model import BaseModel
 
+
 class TestBaseModel(unittest.TestCase):
     """Test cases for BaseModel class."""
 
@@ -32,8 +33,10 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(model_dict, dict)
         self.assertEqual(model_dict['__class__'], 'BaseModel')
         self.assertEqual(model_dict['id'], model.id)
-        self.assertEqual(model_dict['created_at'], model.created_at.isoformat())
-        self.assertEqual(model_dict['updated_at'], model.updated_at.isoformat())
+        self.assertEqual(model_dict['created_at'],
+                         model.created_at.isoformat())
+        self.assertEqual(model_dict['updated_at'],
+                         model.updated_at.isoformat())
 
     def test_save_method_custom_name(self):
         """Test save method."""
@@ -41,6 +44,7 @@ class TestBaseModel(unittest.TestCase):
         old_updated_at = model.updated_at
         model.save()
         self.assertNotEqual(old_updated_at, model.updated_at)
+
 
 if __name__ == '__main__':
     unittest.main()
